@@ -1,10 +1,10 @@
-using Casino.data.model.card;
+using Casino.data.model;
 
 namespace Casino.game.shuffleMechanism;
 
 public class ShuffleAlgorithmImpl: IShuffleAlgorithm
 {
-    public List<Card> Shuffle(List<Card> cardDeck)
+    public Deck Shuffle(Deck cardDeck)
     {
         throw new NotImplementedException();
     }
