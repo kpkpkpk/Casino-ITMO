@@ -1,13 +1,14 @@
+using Casino.data.model.card;
 using Casino.game.shuffleMechanism;
 
 namespace Casino.data.model;
 
 public class Croupier
 {
-    public Deck CardDeck { get; }
+    public Deck Deck { get; }
 
     public Croupier(IShuffleAlgorithm shuffleAlgorithm, Deck cardDeck)
     {
-        CardDeck = shuffleAlgorithm.Shuffle(cardDeck);
+        Deck = shuffleAlgorithm.Shuffle(cardDeck);
     }
 }
