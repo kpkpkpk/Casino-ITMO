@@ -5,10 +5,17 @@ namespace Casino.data.model;
 
 public class Croupier
 {
-    public Deck Deck { get; }
+    public Deck Deck { get; private set; }
+    private readonly IShuffleAlgorithm _shuffleAlgorithm;
 
     public Croupier(IShuffleAlgorithm shuffleAlgorithm, Deck cardDeck)
     {
-        Deck = shuffleAlgorithm.Shuffle(cardDeck);
+        _shuffleAlgorithm = shuffleAlgorithm;
+        Deck = cardDeck;
+    }
+
+    public void ShuffleDeck()
+    {
+        Deck = _shuffleAlgorithm.Shuffle(Deck);
     }
 }

@@ -2,8 +2,8 @@ namespace Casino.data.model.card;
 
 public enum CardSuit
 {
-    Diamonds,
+    Spades,
     Hearts,
+    Diamonds,
     Clubs,
-    Spades
 }
