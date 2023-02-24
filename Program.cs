@@ -3,7 +3,7 @@ using Casino.game;
 using Casino.game.shuffleMechanism;
 
 //TestClass 
-var gameCard = new GameDeckFactory().Create();
+var gameCard = GameDeckFactory.Create();
 foreach (var p in gameCard.CardDeck)
 {
     Console.WriteLine(p.CardRank + " " + p.CardSuit);

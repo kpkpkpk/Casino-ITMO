@@ -3,9 +3,9 @@ using Casino.data.model.card;
 
 namespace Casino.game;
 
-public class GameDeckFactory
+public static class GameDeckFactory
 {
-    public Deck Create()
+    public static Deck Create()
     {
         var cards = new List<Card>();
         var suits = Enum.GetValues(typeof(CardSuit)).Cast<CardSuit>().ToList();
