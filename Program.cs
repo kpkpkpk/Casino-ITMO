@@ -1,3 +1,18 @@
-﻿using Casino.data.model.card;
+﻿using Casino.data.model;
+using Casino.game;
+using Casino.game.shuffleMechanism;
 
-Console.WriteLine(new Card(CardSuit.Clubs, CardRank.Ace));
+//TestClass 
+var gameCard = GameDeckFactory.Create();
+foreach (var p in gameCard.CardDeck)
+{
+    Console.WriteLine(p.CardRank + " " + p.CardSuit);
+}
+
+Console.WriteLine("\n");
+var croupier = new Croupier(new ShuffleAlgorithmImpl(), gameCard);
+croupier.ShuffleDeck();
+foreach (var sC in croupier.Deck.CardDeck)
+{
+    Console.WriteLine(sC.CardRank + " " + sC.CardSuit);
+}
